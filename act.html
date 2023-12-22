@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="fav_language">your favorite Web language:</p>
+    <div id='ans'></div>
+    <script>
+        let savedEmail= sessionStorage.getItem("fav_language");
+        console.log(savedEmail)
+        if(savedEmail=='html'){
+            document.getElementById('ans').innerHTML='you\'re right';
+            document.getElementById('ans').style.color='green'
+        }
+    </script>
+</body>
+</html>

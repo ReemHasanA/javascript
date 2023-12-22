@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="act.html">
+        <p id="fav_language">Please select your favorite Web language:</p>
+  <input type="radio" id="html" name="fav_language" value="HTML">
+  <label for="html">HTML</label><br>
+  <input type="radio" id="css" name="fav_language" value="CSS">
+  <label for="css">CSS</label><br>
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+  <label for="javascript">JavaScript</label>
+
+  <br>  
+
+  <p>Please select your age:</p>
+  <input type="radio" id="age1" name="age" value="30">
+  <label for="age1">0 - 30</label><br>
+  <input type="radio" id="age2" name="age" value="60">
+  <label for="age2">31 - 60</label><br>  
+  <input type="radio" id="age3" name="age" value="100">
+  <label for="age3">61 - 100</label><br><br>
+  <input type="button" value="Submit" id="button">
+    </form>
+    <script>
+        let bu=document.getElementById('button')
+        bu.addEventListener('click',function(){
+        let q1=document.getElementsByName('fav_language');
+        
+        if (q1[0].checked){
+            console.log('nice')
+            document.getElementById("html").style.color='green' ;
+            sessionStorage.setItem("fav_language", 'html');
+        }else{
+            document.getElementById('fav_language').style.color='red';
+            sessionStorage.setItem("fav_language", 'wrong');
+        }
+        window.open('act.html', '_blank');
+    });
+    </script>
+</body>
+</html>
