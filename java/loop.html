@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input id="x" type="number"> -->
+    <button onclick="myFunction()">Try it</button>
+    <button onclick="factorial()">factorial</button>
+    <button onclick="Fibonacci()">Fibonacci</button>
+    <p id="demo"></p>
+    
+    <script>
+        // 1- Write a program that prints numbers from 1 to 10 using a for loop.
+
+for (let a=1;a<=10;a++){
+    console.log(a)
+}
+
+// 2-Write a program that prints the even numbers from 1 to 10 using a for loop.
+// prefer start 1 use if !(a%2)
+for(a=2;a<11;a+=2){
+    console.log(a);
+}
+
+// 3- Write a program that prints the odd numbers from 1 to 10 using a while loop.
+// for(a=1;a<10;a+=2){
+//     console.log(a);
+// }
+a=1;
+while(a<11){
+  if(a%2){
+    console.log(a);
+  }
+  ++a;
+}
+
+// 4- Write a program that prints the multiplication table of a number entered by the user using a for loop.
+function myFunction() {
+  let x = prompt("Please enter your number", "your number");
+  if (x != NaN) {
+    for (let a=1;a<=10;a++){
+    console.log(a *x)
+}
+    // document.getElementById("demo").innerHTML =a*x;
+  }
+}
+
+// 5- Write a program that calculates the sum of numbers from 1 to 100 using a while loop.
+let b=0,i=0;
+while (i++ < 100) {
+  b += i;
+  }
+console.log(b)
+// 6- Write a program that calculates the factorial of a number entered by the user using a for loop.
+function factorial() {
+  let y = prompt("Please enter your number", "your number");
+  let f=1
+    for (y;y>0;--y){
+    f*=y
+}
+console.log(f)}
+// 7- Write a program that prints the Fibonacci series up to a certain number entered by the user using a while loop.
+function Fibonacci() {
+  let z = prompt("Please enter your number", "your number");
+  let b=1,d=0,c=a+b;
+//     for (i=1;i<z;i+=2){
+//     console.log(d)
+//     console.log(b)
+//     d+=b 
+//     b+=d
+// }
+//     while((b+=d)<z){
+//     console.log(d)
+//     // b+=d
+//     console.log(b)
+//     d+=b
+// }
+// do{
+    
+//   (b+=d)
+//     console.log(d)
+//     console.log(b)
+//     d+=b
+    
+// }while((b+=d)<=z)
+}
+
+// 8- Write a program that prints the reverse of the following numbers:
+//5 , 10 , 15 , 20
+// using a while loop.
+
+
+let num=[5 , 10 , 15 , 20]
+i=num.length 
+while (--i>=0) {
+    console.log(num[i])
+}
+    </script>
+</body>
+</html>
